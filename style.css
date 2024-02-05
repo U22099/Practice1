@@ -1,0 +1,100 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form > .btn{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    align-items: start;
+    padding: 30px;
+}
+.form button{
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    height: 30px;
+    width: 100px;
+}
+.form button:focus{
+    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.2);
+}
+.form > .content{
+    background-color: #f9f9f9;
+    height: 700px;
+    width: 400px;
+    box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.form > .content > .formdata{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    width: 350px;
+}
+.form > .content > .formdata > .data{
+    width: 100%;
+    display: grid;
+}
+.form > .content > .formdata > .data input[type="text"]{
+    background-color: #d4d4d4;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.form > .content > .formdata > .data input[type="text"]:focus{
+    border: transparent;
+    box-shadow: 0px 0px 7px 5px  rgba(0, 0, 0, 0.2);
+}
+.form > .content > .formdata > .data input[type="text"]:focus-visible{
+    outline: none;
+}
+.form > .content > .formdata > .data > .subject-container{
+    width: 100%;
+    display: grid;
+    text-align: start;
+    grid-gap: 15px;
+}
+.form > .content > .formdata > .data > .gender-container{
+    width: 100%;
+    display: grid;
+    text-align: start;
+    grid-gap: 15px;
+}
+.form > .content > .formdata > .data > .subject-container > .subjects {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+.form > .content > .formdata > .data > .gender-container > .gender {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+.form > .content > .formdata > .button{
+    display: flex;
+    padding-top: 20px;
+}
+.form > .content > .formdata button{
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    height: 30px;
+    width: 100px;
+}
+.form > .content > .formdata button:focus{
+    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.2);
+}

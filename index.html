@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function myfunct(){
+            document.body.style.backgroundColor= "#000000";
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+        <div class="btn">
+            <button type="button" onclick="myfunct()">Mode</button>
+        </div>
+        <div class="content">
+            <div class="formdata">
+                <div class="header">
+                    <h1>Application Form</h1>
+                </div>
+                
+                <div class="liner"><hr></div>
+                <div class="data">
+                    <div>
+                        <h2>First Name:</h2>    
+                    </div>
+                    <input id="name1" placeholder="Enter Your First Name" type="text">
+                </div>
+                
+                <div class="data">
+                    <div>
+                        <h2>Last Name:</h2>
+                    </div>
+                    <input id="name2" placeholder="Enter Your Last Name" type="text">
+                </div>
+                <div class="data">
+                    <div>
+                        <h2>E-Mail:</h2>
+                    </div>
+                    <input id="name3" placeholder="Enter Your E-mail" type="text">
+                </div>
+                <div class="data">
+                    <div>
+                       <h2> Degree:</h2>
+                    </div>
+                    <select name="Select Your Degree"  id="selector">
+                        <option value="1">OND</option>
+                        <option value="2">HND</option>
+                        <option value="3">Phd</option>
+                    </select>
+                </div>
+                <div class="data">
+                    <div>
+                        <h2>Favorite Subject</h2>
+                    </div>
+                    <div class="subject-container">
+                        <div class="subjects">
+                            <label for="opt1">English</label>
+                            <input type="checkbox" name="english" id="opt1">
+                        </div>
+                        <div class="subjects">
+                            <label for="opt3">Mathematics</label>
+                            <input type="checkbox" name="maths" id="opt2">
+                        </div>
+                        <div class="subjects">
+                            <label for="opt4">Accounting</label>
+                            <input type="checkbox" name="accounting" id="opt3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data">
+                    <div>
+                        <h2>Gender</h2>
+                    </div>
+                    <div class="gender-container">
+                        <div class="gender">
+                            <label for="opt1">Male</label>
+                            <input type="radio" name="gender" id="opt4">
+                        </div>
+                        <div class="gender">
+                            <label for="opt2">Female</label>
+                            <input type="radio" name="gender" id="opt5">
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button>Submit</button>
+                </div>
+                   
+            </div>
+        </div>
+    </div>
+</body>
+</html>
