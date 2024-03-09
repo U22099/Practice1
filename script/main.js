@@ -1,8 +1,8 @@
 const recipeImage = document.querySelector("#recipeImage");
 // const video = document.querySelector("#video");
-const mealName = document.querySelector("#mealName");
-const mealCategory = document.querySelector("#mealCategory");
-const mealDescription = document.querySelector("#mealDescription");
+// const mealName = document.querySelector("#mealName");
+// const mealCategory = document.querySelector("#mealCategory");
+const recipeDescription = document.querySelector("#recipeDescription");
 const ingredientOne = document.querySelector("#ingredientOne");
 const ingredientTwo = document.querySelector("#ingredientTwo");
 const ingredientThree = document.querySelector("#ingredientThree");
@@ -20,10 +20,10 @@ const handleFetch = (searchValue) => {
     .then((respond) => {
       console.log(respond.data.meals[0]);
       recipeImage.src = `${respond.data.meals[0].strMealThumb}`;
-      video.src = `${respond.data.meals[0].strYouTube}`;
-      mealName.innerHTML = respond.data.meals[0].strMeal;
-      mealCategory.innerHTML = respond.data.meals[0].strCategory;
-      mealDescription.innerHTML = respond.data.meals[0].strInstructions;
+      //   video.src = `${respond.data.meals[0].strYouTube}`;
+      //   mealName.innerHTML = respond.data.meals[0].strMeal;
+      //   mealCategory.innerHTML = respond.data.meals[0].strCategory;
+      recipeDescription.innerHTML = respond.data.meals[0].strInstructions;
       ingredientOne.innerHTML = `${respond.data.meals[0].strIngredient1}`;
       ingredientTwo.innerHTML = `${respond.data.meals[0].strIngredient2}`;
       ingredientThree.innerHTML = `${respond.data.meals[0].strIngredient3}`;
@@ -40,7 +40,7 @@ const handleFetch = (searchValue) => {
     });
 };
 
-const generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector("#generateBtn");
 
 generateBtn.addEventListener("click", () => {
   const userInput = document.querySelector("#userInput").value;

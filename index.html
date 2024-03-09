@@ -13,9 +13,10 @@
           <input
             type="text"
             class="input"
+            id="userInput"
             placeholder="Enter your desired food"
           />
-          <button onclick="">Get Recipe</button>
+          <button id="generateBtn">Get Recipe</button>
         </div>
         <div class="output-container">
           <div class="head">
@@ -30,20 +31,20 @@
             <div class="right">
               <h1 class="header">Ingredients</h1>
               <ol>
-                <li class="ingredientOne"></li>
-                <li class="ingredientTwo"></li>
-                <li class="ingredientThree"></li>
-                <li class="ingredientFour"></li>
-                <li class="ingredientFive"></li>
-                <li class="ingredientSix"></li>
-                <li class="ingredientSeven"></li>
-                <li class="ingredientEight"></li>
-                <li class="ingredientNine"></li>
-                <li class="ingredientTen"></li>
+                <li id="ingredientOne"></li>
+                <li id="ingredientTwo"></li>
+                <li id="ingredientThree"></li>
+                <li id="ingredientFour"></li>
+                <li id="ingredientFive"></li>
+                <li id="ingredientSix"></li>
+                <li id="ingredientSeven"></li>
+                <li id="ingredientEight"></li>
+                <li id="ingredientNine"></li>
+                <li id="ingredientTen"></li>
               </ol>
             </div>
           </div>
-          <p class="recipe-text">
+          <p class="recipe-text" id="recipeDescription">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad labore
             consequuntur inventore animi facilis provident velit eum ullam
             perspiciatis dicta iste voluptatem quasi assumenda hic quidem, non
@@ -63,6 +64,7 @@
       </div>
     </div>
 
+    <script src="/node_modules/axios/dist/axios.min.js"></script>
     <script src="script/main.js"></script>
   </body>
 </html>
