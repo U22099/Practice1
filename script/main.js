@@ -14,26 +14,26 @@ const ingredientNine = document.querySelector("#ingredientNine");
 const ingredientTen = document.querySelector("#ingredientTen");
 
 const handleFetch = (searchValue) => {
-  const APIKEY_AND_APIURL = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchValue}`;
-  axios
-    .get(APIKEY_AND_APIURL)
-    .then((respond) => {
-      console.log(respond.data.meals[0]);
-      recipeImage.src = `${respond.data.meals[0].strMealThumb}`;
-      //   video.src = `${respond.data.meals[0].strYouTube}`;
-      recipeName.innerHTML = respond.data.meals[0].strMeal;
-      recipeCategory.innerHTML = `${respond.data.meals[0].strCategory}`;
-      recipeDescription.innerHTML = respond.data.meals[0].strInstructions;
-      ingredientOne.innerHTML = respond.data.meals[0].strIngredient1;
-      ingredientTwo.innerHTML = respond.data.meals[0].strIngredient2;
-      ingredientThree.innerHTML = respond.data.meals[0].strIngredient3;
-      ingredientFour.innerHTML = respond.data.meals[0].strIngredient4;
-      ingredientFive.innerHTML = respond.data.meals[0].strIngredient5;
-      ingredientSix.innerHTML = respond.data.meals[0].strIngredient6;
-      ingredientSeven.innerHTML = respond.data.meals[0].strIngredient7;
-      ingredientEight.innerHTML = respond.data.meals[0].strIngredient8;
-      ingredientNine.innerHTML = respond.data.meals[0].strIngredient7;
-      ingredientTen.innerHTML = respond.data.meals[0].strIngredient10;
+  const API_URL = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchValue}`;
+  fetch(API_URL)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data.meals[0].strIngredient1);
+      recipeImage.src = data.meals[0].strMealThumb;
+      //   //   video.src = `${data.data.meals[0].strYouTube}`;
+      recipeName.innerHTML = data.meals[0].strMeal;
+      recipeCategory.innerHTML = `${data.meals[0].strCategory}`;
+      recipeDescription.innerHTML = data.meals[0].strInstructions;
+      ingredientOne.innerHTML = data.meals[0].strIngredient1;
+      ingredientTwo.innerHTML = data.meals[0].strIngredient2;
+      ingredientThree.innerHTML = data.meals[0].strIngredient3;
+      ingredientFour.innerHTML = data.meals[0].strIngredient4;
+      ingredientFive.innerHTML = data.meals[0].strIngredient5;
+      ingredientSix.innerHTML = data.meals[0].strIngredient6;
+      ingredientSeven.innerHTML = data.meals[0].strIngredient7;
+      ingredientEight.innerHTML = data.meals[0].strIngredient8;
+      ingredientNine.innerHTML = data.meals[0].strIngredient7;
+      ingredientTen.innerHTML = data.meals[0].strIngredient10;
     })
     .catch((error) => {
       console.error(error);
