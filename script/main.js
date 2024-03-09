@@ -46,7 +46,13 @@ generateBtn.addEventListener("click", () => {
   const userInput = document.querySelector("#userInput").value;
 
   if (userInput === "") {
-    alert("Please enter a desired food");
+    Swal.fire({
+      title: "OPPS!",
+      text: "Please enter a desired food",
+      icon: "error",
+      confirmButtonText: "Try Again",
+    });
+  } else {
+    handleFetch(userInput);
   }
-  handleFetch(userInput);
 });
