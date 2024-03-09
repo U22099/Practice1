@@ -136,10 +136,11 @@ body{
 }
 @media (max-width: 615px){
     .container > .content > .input-container{
-        width: 55%;
+        width: 75%;
     }
     .container > .content > .input-container input{
         width: 100px;
+        font-size: 1em;
     }
     .container > .content > .output-container > .head{
         flex-direction: column;
