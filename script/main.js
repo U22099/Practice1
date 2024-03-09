@@ -1,5 +1,5 @@
 const recipeImage = document.querySelector("#recipeImage");
-// const video = document.querySelector("#video");
+// const video = document.querySelector("#video"); // This feature will be implemented later
 const recipeName = document.querySelector("#recipeName");
 const recipeCategory = document.querySelector("#recipeCategory");
 const recipeDescription = document.querySelector("#recipeDescription");
@@ -20,7 +20,7 @@ const handleFetch = (searchValue) => {
     .then((data) => {
       console.log(data.meals[0].strIngredient1);
       recipeImage.src = data.meals[0].strMealThumb;
-      //   //   video.src = `${data.data.meals[0].strYouTube}`;
+      //   //   video.src = `${data.data.meals[0].strYouTube}`; // This feature will be implemented later
       recipeName.innerHTML = data.meals[0].strMeal;
       recipeCategory.innerHTML = `${data.meals[0].strCategory}`;
       recipeDescription.innerHTML = data.meals[0].strInstructions;

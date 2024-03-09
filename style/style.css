@@ -206,4 +206,9 @@ input:focus {
   .output-container p {
     text-align: left;
   }
+
+  .recipeName,
+  .recipeCategory {
+    text-align: center;
+  }
 }
