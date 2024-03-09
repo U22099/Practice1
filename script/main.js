@@ -45,7 +45,7 @@ const generateBtn = document.querySelector("#generateBtn");
 generateBtn.addEventListener("click", () => {
   const userInput = document.querySelector("#userInput").value;
 
-  if (userInput === "") {
+  if (userInput == "") {
     Swal.fire({
       title: "OPPS!",
       text: "Please enter a desired food",
