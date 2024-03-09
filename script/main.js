@@ -52,6 +52,7 @@ generateBtn.addEventListener("click", () => {
       icon: "error",
       confirmButtonText: "Try Again",
     });
+  } else {
+    handleFetch(userInput);
   }
-  handleFetch(userInput);
 });
