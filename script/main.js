@@ -44,5 +44,9 @@ const generateBtn = document.querySelector("#generateBtn");
 
 generateBtn.addEventListener("click", () => {
   const userInput = document.querySelector("#userInput").value;
+
+  if (userInput === "") {
+    alert("Please enter a desired food");
+  }
   handleFetch(userInput);
 });
