@@ -23,7 +23,7 @@ body{
     align-items: center;
     height: 100%;
     padding: 40px 0px;
-    background-image: url("IMG_0929.JPG");
+    background-image: url("../images/IMG_0929.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -135,18 +135,25 @@ body{
     font-size: 1.6em;
 }
 @media (max-width: 615px){
+    .container > .content{
+        width: 95%;
+    }
     .container > .content > .input-container{
         width: 75%;
     }
     .container > .content > .input-container input{
-        width: 100px;
-        font-size: 1em;
+        width: 150px;
+        font-size: 0.9em;
+        height: 20px;
     }
     .container > .content > .output-container > .head{
         flex-direction: column;
     }
     .container > .content > .output-container > .head img{
-        width: 200px;
-        height: 100px;
+        width: 250px;
+        height: 180px;
+    }
+    .container > .content > .output-container p {
+        text-align: left;
     }
 }
