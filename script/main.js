@@ -1,5 +1,5 @@
 const recipeImage = document.querySelector("#recipeImage");
-const anchorLink = document.querySelector("#anchorLink"); // This feature will be implemented later
+const anchorLink = document.querySelector("#anchorLink");
 const recipeName = document.querySelector("#recipeName");
 const recipeCategory = document.querySelector("#recipeCategory");
 const recipeDescription = document.querySelector("#recipeDescription");
@@ -20,10 +20,10 @@ const handleFetch = (searchValue) => {
     .then((data) => {
       console.log(data);
       recipeImage.src = data.meals[0].strMealThumb;
-      anchorLink.href = data.meals[0].strYoutube; // This feature will be implemented later
-      anchorLink.innerHTML = "Watch the tutoral on Youtube"; // This feature will be implemented later
+      anchorLink.href = data.meals[0].strYoutube;
+      anchorLink.innerHTML = "Watch the tutoral on Youtube";
       recipeName.innerHTML = data.meals[0].strMeal;
-      recipeCategory.innerHTML = `${data.meals[0].strCategory}`;
+      recipeCategory.innerHTML = data.meals[0].strCategory;
       recipeDescription.innerHTML = data.meals[0].strInstructions;
       ingredientOne.innerHTML = data.meals[0].strIngredient1;
       ingredientTwo.innerHTML = data.meals[0].strIngredient2;
