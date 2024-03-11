@@ -54,6 +54,23 @@ generateBtn.addEventListener("click", () => {
       confirmButtonText: "Try Again",
     });
   } else {
+    //This would clear the output infomation anytime the user
+    //request for a new meal, just in case the meal is not located.
+    userInput.innerHTML = "";
+    recipeImage.src = "images/IMG_0929.JPG";
+    recipeName.innerHTML = "ERROR";
+    recipeCategory.innerHTML = "NONE";
+    recipeDescription.innerHTML = "SORRY I CAN'T FIND YOUR DESIRED FOOD!!";
+    ingredientOne.innerHTML = "";
+    ingredientTwo.innerHTML = "";
+    ingredientThree.innerHTML = "";
+    ingredientFour.innerHTML = "";
+    ingredientFive.innerHTML = "";
+    ingredientSix.innerHTML = "";
+    ingredientSeven.innerHTML = "";
+    ingredientEight.innerHTML = "";
+    ingredientNine.innerHTML = "";
+    ingredientTen.innerHTML = "";
     handleFetch(userInput);
   }
 });
