@@ -1,5 +1,5 @@
 const recipeImage = document.querySelector("#recipeImage");
-// const video = document.querySelector("#video"); // This feature will be implemented later
+const anchorLink = document.querySelector("#anchorLink"); // This feature will be implemented later
 const recipeName = document.querySelector("#recipeName");
 const recipeCategory = document.querySelector("#recipeCategory");
 const recipeDescription = document.querySelector("#recipeDescription");
@@ -18,9 +18,10 @@ const handleFetch = (searchValue) => {
   fetch(API_URL)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data.meals[0].strIngredient1);
+      console.log(data);
       recipeImage.src = data.meals[0].strMealThumb;
-      //   //   video.src = `${data.data.meals[0].strYouTube}`; // This feature will be implemented later
+      anchorLink.href = data.meals[0].strYoutube; // This feature will be implemented later
+      anchorLink.innerHTML = "Watch the tutoral on Youtube"; // This feature will be implemented later
       recipeName.innerHTML = data.meals[0].strMeal;
       recipeCategory.innerHTML = `${data.meals[0].strCategory}`;
       recipeDescription.innerHTML = data.meals[0].strInstructions;
@@ -35,8 +36,8 @@ const handleFetch = (searchValue) => {
       ingredientNine.innerHTML = data.meals[0].strIngredient7;
       ingredientTen.innerHTML = data.meals[0].strIngredient10;
     })
-    .catch((error) => {
-      console.error(error);
+    .catch((err) => {
+      console.error("Error" + err);
     });
 };
 

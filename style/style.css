@@ -87,6 +87,18 @@ input:focus {
   border: 2px solid #fff;
 }
 
+#anchorLink {
+  font-size: 1.4rem;
+  color: blue;
+  padding-top: 1.3rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#anchorLink:focus {
+  color: purple;
+}
+
 /* Styling The Output Container */
 .output-container {
   display: flex;
